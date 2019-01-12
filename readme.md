@@ -9,7 +9,7 @@
 
 
 1.下載程式碼
-- git clone https://github.com/rueibin/library.git
+- git https://github.com/rueibin/Laravel-Library.git
 
 2.進入專案目錄，之後composer安裝
 - composer install
