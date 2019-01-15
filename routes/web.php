@@ -12,26 +12,13 @@
 */
 
 use App\Models\Book;
-
 use App\Models\Borrow;
-
 
 Route::get('/', 'Backend\AuthController@login')->name('login');
 Route::post('/check', 'Backend\AuthController@check')->name('auth.check');
 Route::post('/logout', 'Backend\AuthController@logout')->name('auth.logout');
 
-
-// Route::get('/tt',function(){
-
-//     $book=Book::with(['borrow'=>function($query){
-//                 $query->where('returned',2);
-//             }])->where('barcode','9789863795407')->get();
-//     dd($book[0]->borrow[0]->id);
-
-// });
-
-
-Route::middleware(['auth:backend'])->namespace('Backend')->prefix('backend')->group(function () {
+Route::middleware(['auth:backend','prevent-back-history'])->namespace('Backend')->prefix('backend')->group(function () {
     //登入頁
     Route::get('/home', 'HomeController@index')->name('home.index');
     //書架
@@ -56,4 +43,7 @@ Route::middleware(['auth:backend'])->namespace('Backend')->prefix('backend')->gr
     //歸還
     Route::get('/borrow/back', 'BorrowController@back')->name('borrow.back')->middleware('permission:borrow-bookReturn|borrow-return');
 
+    Route::get('404', function () {
+        return view('errors.404');
+    })->name('404');
 });
