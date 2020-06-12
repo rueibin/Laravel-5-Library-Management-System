@@ -1,40 +1,130 @@
+# Laravel-5 Library Management System
 
-## 圖書管理系統 Library System
 
-- 登入畫面 login
+
+## Preview
+
+**Login Page**
 ![avatar](https://github.com/rueibin/Laravel-Library/blob/master/public/images/login.PNG)
 
-- 功能畫面 function
+
+
+**Permission List Page**
 ![avatar](https://github.com/rueibin/Laravel-Library/blob/master/public/images/function.PNG)
 
 
-1.下載程式碼 download
-- git clone https://github.com/rueibin/Laravel-Library.git
 
-2.進入專案目錄，之後composer安裝 install
-- composer install
+## Technologies Used
 
-3.配置.evn 
-- 將.env.example複製成.env
+- Front-end
+  - Bootstrap 3.x
+  - jQuery 2.x
+  - Ajax
+- Back-end
+  - Laravel 5.x
+  
+  - Form Validation
+  
+  - Zizaco\Entrust
+    
 
-4.配置資料庫 
-- DB_HOST=localhost
-- DB_DATABASE=homestead
-- DB_USERNAME=homestead
-- DB_PASSWORD=secret
 
-5.遷移資料
-- php artisan migrate
 
-6.填充資料
-- php artisan db:seed --class=ManagerTableSeeder
-- php artisan db:seed --class=BookTypeTableSeeder
-- php artisan db:seed --class=BookCaseTableSeeder
-- php artisan db:seed --class=PublishingTableSeeder
-- php artisan db:seed --class=ReaderTableSeeder
-- php artisan db:seed --class=BookTableSeeder
+## System Module
 
-7.匯入權限資料
-- data.sql
+![avatar](https://github.com/rueibin/Laravel-Library/blob/master/public/images/system.JPG)
 
+
+
+## Features
+
+- Front-end
+
+  - User login and logout
+  - Borrow and return operations
+  - Adding and editing books
+  - View the book list
+  - more...
+
+- Back-end
+
+  - Using repository pattern and service Layer
+  - Using users roles and permissions management 
+
+
+
+## Requirements
+
+- PHP 7.2+
+- Mysql  5.7+
+
+
+
+## Installation
+
+
+
+1.Download code from Github
+```
+git clone https://github.com/rueibin/Laravel-Library.git
+```
+
+
+
+2.Install the extended package dependency
+
+```
+composer install
+```
+
+
+
+3.Generate application key
+
+```
+php artisan key:generate
+```
+
+
+
+4.Copy .env.example to .env
+
+
+
+5.Update .env file with DB information
+
+```
+DB_HOST=localhost
+DB_DATABASE=library
+DB_USERNAME=root
+DB_PASSWORD=
+
+CACHE_DRIVER=array
+```
+
+
+
+6.Import database schema:
+
+- library.sql
+
+
+
+7.Start Application
+
+```
+php artisan serve
+```
+
+
+
+8.Open URL on your browser:
+
+```
+http://127.0.0.1:8000
+```
+
+account:admin
+
+password:123456
 
