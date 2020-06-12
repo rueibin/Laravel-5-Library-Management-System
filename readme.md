@@ -11,6 +11,7 @@
 
 
 **Permission List Page**
+
 ![avatar](https://github.com/rueibin/Laravel-Library/blob/master/public/images/function.PNG)
 
 
@@ -67,7 +68,7 @@
 
 1.Download code from Github
 ```
-git clone https://github.com/rueibin/Laravel-Library.git
+git clone https://github.com/rueibin/Laravel-5-Library-Management-System.git
 ```
 
 
